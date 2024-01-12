@@ -12,6 +12,9 @@ class Square:
     def __init__(self, size):
         """
         Constructor method defines size of square
+
+        Args:
+            size(int) - size of square
         """
         self.__size = size
         # __ makes size private attribute
