@@ -20,7 +20,7 @@ class Square:
             position (tuple) : coordinate (x,y) position of the square
         """
         self.__size = size
-        size.position = position
+        self.position = position
 
     @property
     def size(self):
