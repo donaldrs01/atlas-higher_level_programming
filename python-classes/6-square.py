@@ -1,11 +1,11 @@
-    #!/usr/bin/python3
-    """
-    Definition of Square class
+ #!/usr/bin/python3
+ """
+ Definition of Square class
 
-    Methods:
-        area(): returns the area of a square
-        my_print: prints out the square to stdout with '#' character
-    """
+ Methods:
+     area(): returns the area of a square
+     my_print: prints out the square to stdout with '#' character
+ """
     def __init__(self, size=0, position=(0,0)):
         """
             Initializes the square
