@@ -83,8 +83,11 @@ class Square:
         """
         if self.__size == 0:
             print("")
-        else:
-            for i in range(self.size):
-                for j in range(self.size):
-                    print("#", end="")  # no \n
-                print("")  # prints empty line after each row
+        for _ in range(self.__position[1]):
+            print("")  # prints empty lines up to position of [1]
+        for _ in range(self.__size):
+            for x in range(self.position[0]):
+                print(" ", end="")
+            for j in range(self.size):
+                print("#", end="")
+            print("")
