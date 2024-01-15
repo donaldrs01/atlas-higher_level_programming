@@ -87,7 +87,7 @@ class Square:
             print("")  # prints empty lines up to position of [1]
         for _ in range(self.__size):
             for x in range(self.position[0]):
-                print(" ", end="")
+                print(" ", end="")  # prints spaces based on horizontal position
             for j in range(self.size):
-                print("#", end="")
-            print("")
+                print("#", end="")  # prints '#' based on size of square
+            print("")  # finish with empty line after each row of '#' characters
