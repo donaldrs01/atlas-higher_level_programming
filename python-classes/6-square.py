@@ -1,18 +1,23 @@
- #!/usr/bin/python3
- """
- Definition of Square class
+#!/usr/bin/python3
+"""
+Square class with size and positional attributes
+"""
 
- Methods:
-     area(): returns the area of a square
-     my_print: prints out the square to stdout with '#' character
- """
-    def __init__(self, size=0, position=(0,0)):
+
+class Square:
+    """
+    Definition of Square class
+    Methods:
+        area(): returns the area of a square
+        my_print: prints out the square to stdout with '#' character
+    """
+    def __init__(self, size=0, position=(0, 0)):
         """
-            Initializes the square
+        Initializes the square
 
-            Args:
-                size (int) : size of the side of a square
-                position (tuple) : coordinate (x,y) position of the square
+        Args:
+            size (int) : size of the side of a square
+            position (tuple) : coordinate (x,y) position of the square
         """
         self.__size = size
         size.position = position
