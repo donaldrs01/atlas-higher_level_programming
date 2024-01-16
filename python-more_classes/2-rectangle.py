@@ -16,9 +16,10 @@ class Rectangle:
             width (int) : width of rectangle
             height (int) : height of rectangle
         """
-        self.width = width  # defined attribute 'width' that is equal to width passed into method
+        self.width = width
+        # defined attribute 'width' that is equal to width passed into method
         self.height = height
-    
+
     @property
     def width(self):
         """
@@ -47,7 +48,7 @@ class Rectangle:
         Getter for height attribute
         """
         return self.__height
-    
+
     @height.setter
     def height(self, value):
         """
@@ -62,14 +63,16 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         else:
             self.__height = value
-    def area(self):
-        """
-        Method for area calculation of rectangle
 
-        Return:
-            area of the rectangle
-        """
-        return self.__width * self.__height  # area = width * height for rectangle
+        def area(self):
+            """
+            Method for area calculation of rectangle
+
+            Return:
+                area of the rectangle
+            """
+        return self.__width * self.__height
+        # area = width * height for rectangle
 
     def perimeter(self):
         """
@@ -78,7 +81,7 @@ class Rectangle:
         Return:
             perimeter of the rectangle
         """
-        if self.__width == 0 or self.__height ==0:
+        if self.__width == 0 or self.__height == 0:
             return 0
         else:
             return 2 * (self.__width + self.__height)
