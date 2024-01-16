@@ -5,7 +5,7 @@ This is a basic creation/description of a 'Square' class created on Python
 """
 
 
-clas Square:
+class Square:
 
     """
     Square definition for the square class
