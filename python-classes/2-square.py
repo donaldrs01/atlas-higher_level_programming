@@ -5,7 +5,7 @@ Creation of square class with size attribute
 """
 
 
-class Square:
+clas Square:
     """
     Square class
     """
