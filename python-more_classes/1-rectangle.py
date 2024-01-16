@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Module that defines and builds on Rectangle class
+Module 1-rectangle
 """
 
 
