@@ -5,7 +5,7 @@ Defining a class 'Square'
 """
 
 
-clas Square:
+class Square:
     """
     'Square' class
     """
