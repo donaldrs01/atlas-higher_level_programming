@@ -104,7 +104,7 @@ class Rectangle:
         else:
             for i in range(self.height):
                 for j in range(self.width):
-                    print("#", end="")  # no \n
+                    print(self.print_symbol, end="")  # no \n
 
     def __str__(self):
         """
@@ -115,7 +115,7 @@ class Rectangle:
         """
         if self.__width == 0 or self.__height == 0:
             return ""
-        return '\n'.join(['#' * self.__width for _ in range(self.__height)])
+        return '\n'.join([str(self.print_symbol) * self.__width for _ in range(self.__height)])
 
     def __repr__(self):
         """
