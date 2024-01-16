@@ -3,6 +3,7 @@
 Module that defines function that prints first and last name based on input
 """
 
+
 def say_my_name(first_name, last_name=""):
     """
     Function that prints 'My name is <first name> <last name>'.
