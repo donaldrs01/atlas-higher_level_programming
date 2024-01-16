@@ -9,7 +9,7 @@ def matrix_divided(matrix, div):
     Function that divides all elemeents in a matrix by a specific number
     
     Args:
-        matrix (set) : a set of numbers
+        matrix (list) : a list of numbers
         div (int) : the divisor
 
     Errors:
@@ -19,3 +19,11 @@ def matrix_divided(matrix, div):
         ZeroDivisionError: If 'div' is equal to 0
     """
 
+    if type(div) is not int and type(div) is not float:
+        raise TypeError("div must be a number")
+    if type(matrix) is not list:
+        raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+    if div == 0:
+        raise ZeroDivisionError("division by zero")
+    if any(len(row) != len(matrix[0]) for row in matrix):
+        raise TypeError("Each row of the matrix must have the same size")
