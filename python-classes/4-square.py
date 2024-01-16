@@ -19,6 +19,7 @@ class Square:
 
     @property
     def size(self):
+        #  decoration allows us to access 'size' using . (dot) notation
         """
         Getter for size attribute
         """
@@ -37,6 +38,7 @@ class Square:
         if value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
+        #  we can set value with setter using . notation
 
     def area(self):
         """
