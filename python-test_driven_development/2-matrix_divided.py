@@ -7,7 +7,7 @@ Module that divides all elements in a matrix
 def matrix_divided(matrix, div):
     """
     Function that divides all elemeents in a matrix by a specific number
-    
+
     Args:
         matrix (list) : a list of numbers
         div (int) : the divisor
