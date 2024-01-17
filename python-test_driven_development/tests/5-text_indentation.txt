@@ -1,1 +1,14 @@
-Test file
+# Test file for 5-text_indentation #
+
+# Successful implementation of function #
+>>> text_indentation(Why is there evil? I don't like it.)
+Why is there evil?
+<BLANKLINE>
+I don't like it.
+<BLANKLINE>
+
+# Non-string passed into function #
+>>> text_indentation(14.7)
+Traceback (most recent call last):
+	...
+TypeError: text must be a string
