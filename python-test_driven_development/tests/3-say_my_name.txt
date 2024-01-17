@@ -1,5 +1,7 @@
 # Test file for 3-say_my_name.py # 
 
+>>> say_my_name = __import__("3-say_my_name").say_my_name
+
 # Proper input to function #
 >>> say_my_name("Walter", "White")
 My name is Walter White
