@@ -23,6 +23,8 @@ def matrix_divided(matrix, div):
         raise TypeError("div must be a number")
     if type(matrix) is not list:
         raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+    elif not all(isinstance(i, (int, float)) for row in matrix for i in row):
+        raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
     if div == 0:
         raise ZeroDivisionError("division by zero")
     if any(len(row) != len(matrix[0]) for row in matrix):
