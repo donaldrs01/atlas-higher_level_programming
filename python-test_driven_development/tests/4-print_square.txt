@@ -1,1 +1,25 @@
-Test file 
+# Test file for 4-print_square.py #
+
+# Successful implementation of function #
+>>> print_square(3)
+###
+###
+###
+
+# 'size' is not an integer #
+>>> print_square(wrong)
+Traceback (most recent call last):
+	...
+TypeError: size must be an integer
+
+# 'size' is a negative number #
+>>> print_square(-2)
+Traceback (most recent call last):
+	...
+ValueError: size must be >= 0
+
+# 'size' is a float and less than 0 #
+>>> print_square(-2.5)
+Traceback (most recent call last):
+	...
+TypeError: size must be an integer
