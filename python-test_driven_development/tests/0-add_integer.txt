@@ -1,2 +1,21 @@
-import unittest
+# Test file for add_integer.py # 
 
+# Two integers #
+>>> add_integer(1, 4)
+5
+
+# Integer and float #
+>>> add_integer (7.3, 2)
+9
+
+# Integer and string # 
+>>> add_integer(11, "test")
+Traceback (most recent call last):
+	...
+TypeError: b must be an integer
+
+# No integer input #
+>>> add_integer(None)
+Traceback (most recent call last):
+	...
+TypeError: a must be an integer
