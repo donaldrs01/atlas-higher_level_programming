@@ -1,1 +1,17 @@
-Test file 
+# Test file for 3-say_my_name.py # 
+
+# Proper input to function #
+>>> say_my_name("Walter", "White")
+My name is Walter White
+
+# first_name is not a string #
+>>> say_my_name(12.2, "Abraham")
+Traceback (most recent call last):
+	...
+TypeError: first_name must be a string
+
+# last_name is not a string #
+>>> say_my_name("Abraham", 12.2)
+Traceback (most recent call last):
+	...
+TypeError: last_name must be a string 
