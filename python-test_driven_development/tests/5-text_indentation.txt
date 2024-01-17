@@ -1,5 +1,7 @@
 # Test file for 5-text_indentation #
 
+>>> text_indendation = __import__("5-text_indentation").text_indentation
+
 # Successful implementation of function #
 >>> text_indentation(Why is there evil? I don't like it.)
 Why is there evil?
