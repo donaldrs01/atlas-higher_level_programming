@@ -6,7 +6,7 @@ Module for function that searches for characters and prints new lines
 
 def text_indentation(text):
     """
-    Function that searches for special characters and follows them with 2 new lines
+    Function that searches for special characters and prints 2 new lines
 
     Args:
         text (str) : the inputted text
@@ -25,5 +25,3 @@ def text_indentation(text):
         else:
             new_line += char
     print("{}".format(new_line), end="")
-
-
