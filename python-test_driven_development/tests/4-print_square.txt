@@ -1,5 +1,7 @@
 # Test file for 4-print_square.py #
 
+>>> print_square = __import__("4-print_square").print_square
+
 # Successful implementation of function #
 >>> print_square(3)
 ###
