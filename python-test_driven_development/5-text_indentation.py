@@ -15,6 +15,15 @@ def text_indentation(text):
         TypeError : if text is not a proper string
     """
 
-    if type(text) is not string:
+    if type(text) is not str:
         raise TypeError("text must be a string")
+    break_chars = [".", "?", ":"]
+    new_line = ""
+    for char in text:
+        if char in break_chars:
+            new_line += char + "\n\n"
+        else:
+            new_line += char
+    print("{}".format(new_line), end="")
+
 
