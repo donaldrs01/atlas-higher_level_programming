@@ -9,7 +9,6 @@ def lookup(obj):
     Takes object as argument and returns a list of all attributes and methods associated with that object
 
     Args:
-        obj : the object whose methods will be retrieved
+        obj: the object whose methods will be retrieved
     """
-
     return dir(obj)
