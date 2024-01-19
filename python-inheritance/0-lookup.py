@@ -12,4 +12,4 @@ def lookup(obj):
         obj : the object whose methods will be retrieved
     """
 
-    return list(dir(obj)) 
+    return dir(obj)
