@@ -8,4 +8,7 @@ class MyList(list):
     Sub-class of 'list'
 
     Args:
-        list : 
+        list : built-in class
+    """
+
+
