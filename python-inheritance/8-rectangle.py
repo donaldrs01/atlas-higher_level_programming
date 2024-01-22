@@ -4,35 +4,7 @@ Module containing:
     BaseGeometry : parent class
     Rectangle : sub class
 """
-
-
-class BaseGeometry:
-    """
-    BaseGeometry class
-    """
-    def area(self):
-        """
-        Incomplete method that raises exception
-        """
-        raise Exception("area() is not implemented")
-
-    def integer_validator(self, name, value):
-        """
-        Validates the passed value
-
-        Args:
-            name : name of value (str)
-            value : the value (int)
-
-        Raises:
-            TypeError : if value not integer
-            ValueError : if value is less than or equal to 0
-        """
-
-        if type(value) is not int:
-            raise TypeError("{} must be an integer".format(name))
-        if value <= 0:
-            raise ValueError("{} must be greater than 0".format(name))
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
 class Rectangle(BaseGeometry):
