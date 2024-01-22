@@ -16,4 +16,3 @@ def read_file(filename=""):
         read_data = file.read().rstrip('\n')
         if read_data:
             print(read_data)
-
