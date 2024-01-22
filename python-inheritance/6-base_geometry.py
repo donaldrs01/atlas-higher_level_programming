@@ -12,4 +12,4 @@ class BaseGeometry:
         """
         Basic and incomplete method for area calculation
         """
-        raise Exception ("area() is not implemented")
+        raise Exception("area() is not implemented")
