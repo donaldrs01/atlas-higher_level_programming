@@ -11,4 +11,8 @@ class MyList(list):
         list : built-in class
     """
 
-
+    def print_sorted(self):
+        """
+        Method that prints list in ascending order
+        """
+        print(sorted(self))
