@@ -19,5 +19,6 @@
 
 # invalid test #
 
->>> my_list = MyList([3, 1, test, 19])
+>>> my_list = MyList([3, 1, blah, 19])
+>>> my_list.print_sorted()
 Traceback (most recent call last): 
