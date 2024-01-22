@@ -21,4 +21,6 @@
 
 >>> my_list = MyList([3, 1, blah, 19])
 >>> my_list.print_sorted()
-Traceback (most recent call last): 
+Traceback (most recent call last):
+	...
+NameError: name 'blah' is not defined 
