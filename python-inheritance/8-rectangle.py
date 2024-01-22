@@ -58,4 +58,4 @@ class Rectangle(BaseGeometry):
 
 # test function #
 
-print(issubclass(Rectangle, BaseGeometry))
+# print(issubclass(Rectangle, BaseGeometry)) #
