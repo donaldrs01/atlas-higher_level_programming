@@ -8,8 +8,7 @@ passed object is exact instance of specified class
 def is_same_class(obj, a_class):
     """
     Method that evaluates whether passed object
-   
-   is instance of specified class
+    is instance of specified class
 
     Args:
         obj : the object to evaluate
