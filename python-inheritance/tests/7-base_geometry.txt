@@ -1,0 +1,17 @@
+# Test file for base-geometry.py # 
+
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+# Valid integer value #
+>>> integer_validator("width", 21)
+
+# Value not an integer #
+>>> integer_validator("width", test)
+Traceback (most recent call last):
+	...
+TypeError: <name> must be an integer
+
+# Value is less than or equal to 0 # 
+Traceback (most recent call last):
+	...
+ValueError: <name> must be greater than 0
