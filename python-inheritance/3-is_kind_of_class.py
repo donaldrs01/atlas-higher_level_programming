@@ -4,6 +4,7 @@ Module evaluates for whether object is instance or sub-instance
 of specified class
 """
 
+
 def is_kind_of_class(obj, a_class):
     """
     Function that checks if object is instance of / inherited from
