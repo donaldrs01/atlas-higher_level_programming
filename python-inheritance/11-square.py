@@ -111,4 +111,4 @@ class Square(Rectangle):
         """
         Prints the square description
         """
-        print(self.__str__()  # prints string representation of square
+        print(self.__str__())   # prints string representation of square
