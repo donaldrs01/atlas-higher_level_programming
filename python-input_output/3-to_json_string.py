@@ -16,4 +16,3 @@ def to_json_string(my_obj):
         str : JSON representation of object
     """
     return json.dumps(my_obj)
-
