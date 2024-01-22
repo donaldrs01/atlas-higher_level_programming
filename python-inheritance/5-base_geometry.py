@@ -3,7 +3,8 @@
 Module for BaseGeometry class creation
 """
 
-class(BaseGeometry):
+
+class (BaseGeometry):
     """
     Empty class for BaseGeometry
     """
