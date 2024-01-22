@@ -18,7 +18,7 @@ class Square(Rectangle):
             size : size of a side of the square
         """
         self.integer_validator("size", size)
-        # validate and set size BEFORE instance is created 
+        # validate and set size BEFORE instance is created
         super().__init__(size, size)  # pass size as both width and height
         self.__size = size
 
