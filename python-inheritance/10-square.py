@@ -97,3 +97,8 @@ class Square(Rectangle):
             area of square
         """
         return self.__size ** 2
+
+# test print
+# print(issubclass(Square, Rectangle))
+# print(Square)
+# print(Rectangle)
