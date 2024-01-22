@@ -37,7 +37,7 @@ class BaseGeometry:
 
 class Rectangle(BaseGeometry):
     """
-    Class definition of rectable - subclass
+    Class definition of rectangle - subclass
     """
     def __init__(self, width, height):
         """
