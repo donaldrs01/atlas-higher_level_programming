@@ -61,6 +61,6 @@ class Student:
             json (dict):
                 dictionary where keys are attr names and values are attr values
         """
-        for key, value in json.items():  # iterates over each key-value pair
+        for key, value in json:  # iterates over each key-value pair
             setattr(self, key, value)  # replaces attr based on provided value
 
