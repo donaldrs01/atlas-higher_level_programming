@@ -12,7 +12,7 @@ class Student:
         first_name
         last_name
         age
-    
+
     Methods:
         def to_json(self)  :
             returns dictionary representation of instance of Student
@@ -30,7 +30,6 @@ class Student:
         self.first_name = first_name  # initializes attributes based on input
         self.last_name = last_name
         self.age = age
-
 
     def to_json(self):
         """
