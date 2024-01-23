@@ -47,6 +47,6 @@ class Student:
 
         filtered_dict = {}  # only includes attributes passed as input
         for attribute in attrs:
-            if hasattr(self, attribute):
+            if hasattr(self, attribute):  #  utilize hasattr builtin
                 filtered_dict[attribute] = getattr(self, attribute)
         return filtered_dict
