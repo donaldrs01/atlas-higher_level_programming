@@ -34,6 +34,17 @@ def load_from_json_file(filename):
         with open(filename, 'r', encoding="utf-8") as file:
             return json.load(file)
     except FileNotFoundError:
-        empty_list = []
-        empty_list.extend(sys.argv[1:])
-        save_to_json_file(empty_list, "add_item.json")
+        return []
+
+
+if __name__ == "__main__":
+    filename = "add_item.json"
+
+    my_list = load_from_json_file(filename)
+    #  loads existing list from add_item
+
+    my_list.extend(sys.argv[1:])
+    # add command line arguments to list
+
+    save_to_json_file(my_list, filename)
+    #  saves updated list
