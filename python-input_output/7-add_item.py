@@ -39,6 +39,7 @@ def load_from_json_file(filename):
 
 if __name__ == "__main__":
     filename = "add_item.json"
+    #  execute when run directly from command line
 
     my_list = load_from_json_file(filename)
     #  loads existing list from add_item
