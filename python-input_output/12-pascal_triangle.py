@@ -27,8 +27,7 @@ def pascal_triangle(n):
             triangle.append(row)
 
         return triangle
-
-# Test
+# Test case
 # n = 7
 # result = pascal_triangle(n)
 # print(result)
