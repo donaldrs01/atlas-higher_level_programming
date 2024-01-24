@@ -5,6 +5,14 @@ Module that lists integers representing the Pascal Triangle
 
 
 def pascal_triangle(n):
+    """
+    Pascal Triangle function that creates n row of triangle
+    In Pascal's Triangle, the current element is the sum of the
+    two elements directly above it. This function re-creates that logic.
+
+    Args:
+        n : the number of rows on triangle
+    """
     if n <= 0:
         return []
     else:
@@ -16,6 +24,11 @@ def pascal_triangle(n):
                 #  [i - 1] = previous row in triangle
                 #  [j - 1] = previous element on row
                 #  gets sum of two elements directly above current
-        triangle.append(row)
+            triangle.append(row)
 
         return triangle
+
+# Test
+# n = 7
+# result = pascal_triangle(n)
+# print(result)
