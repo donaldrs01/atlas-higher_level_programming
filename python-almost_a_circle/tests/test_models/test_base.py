@@ -12,15 +12,23 @@ class TestBase(unittest.TestCase):
         """
         Tests Base() instantiation and unique IDs
         """
-        obj1 = Base()  # Output : 1
-        obj2 = Base()  # Output : 2
-        self.assertEqual(obj1.id, 1)
-        self.assertEqual(obj2.id, 2)
+        b = Base()  # Output : 1
+        b1 = Base()  # Output : 2
+        self.assertEqual(b.id, 1)
+        self.assertEqual(b1.id, 2)
 
     def test_id_sync(self):
         """
         Tests sync between nb_objects and ID #
         """
-        obj1 = Base()
-        self.assertEqual(getattr(Base, "_Base__nb_objects"), obj1.id)
+        b = Base()
+        self.assertEqual(getattr(Base, "_Base__nb_objects"), b.id)
+
+    def test_custom_ID(self):
+        """
+        Tests custom ID input (int)
+        """
+        i = 54
+        b = Base(i)
+        self.assertEqual(b.id, i)
 
