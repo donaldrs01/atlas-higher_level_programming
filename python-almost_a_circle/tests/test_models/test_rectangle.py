@@ -12,7 +12,7 @@ class TestRectangle(unittest.TestCase):
         """
         Imports base model and instantiates Rectangle class
         """
-        Base._Basei__nb_objects = 0
+        Base._Base__nb_objects = 0
 
     def tearDown(self):
         """
@@ -25,7 +25,7 @@ class TestRectangle(unittest.TestCase):
         Tests Rectangle class type
         """
         r = Rectangle(1, 2)  # receives valid args
-        self.assertIsInstance(Rectangle(), Rectangle)  # instance is type Rectangle
+        self.assertIsInstance(r, Rectangle)  # instance is type Rectangle
 
     def test_inheritance(self):
         """
