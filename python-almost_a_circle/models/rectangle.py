@@ -139,10 +139,10 @@ class Rectangle(Base):
             print()
             return
         else:
-            for i in range(self.__height):
-                for j in range(self.__width):
-                    print('#', end="")
-                print()  # prints new line after finishing row
+            for _ in range(self.__y):
+                print()  # prints empty lines for y coordinate
+            for _ in range(self.__height):
+                print(' ' * self.__x + "#" * self.__width)  # add spaces before printing row based on x input
 
     def __str__(self):
         """
