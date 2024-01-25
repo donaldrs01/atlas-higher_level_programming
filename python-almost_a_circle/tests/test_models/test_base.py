@@ -19,7 +19,7 @@ class TestBase(unittest.TestCase):
 
     def test_id_sync(self):
         """
-        Tests sync between nb_objects and ID #
+        Tests sync between nb_objects and ID
         """
         b = Base()
         self.assertEqual(getattr(Base, "_Base__nb_objects"), b.id)
