@@ -71,3 +71,29 @@ class TestRectangle(unittest.TestCase):
         s = "width must be an integer"
         self.assertEqual(str(e.exception), s)
 
+    def test_height_not_int(self):
+        """
+        Tests when height not valid integer
+        """
+        with self.assertRaises(TypeError) as e:
+            r = Rectangle(3, 'test')
+        s = "height must be an integer"
+        self.assertEqual(str(e.exception), s)
+
+    def test_x_not_int(self):
+        """
+        Tests when X is not an integer
+        """
+        with self.assertRaises(TypeError) as e:
+            r = Rectangle(3, 4, "test")
+        s = "x must be an integer"
+        self.assertEqual(str(e.exception), s)
+
+    def test_y_not_int(self):
+        """
+        Tests when Y is not an integer
+        """
+        with self.assertRaises(TypeError) as e:
+            r = Rectangle(3, 4, 1, "test")
+        s = "y must be an integer"
+        self.assertEqual(str(e.exception), s)
