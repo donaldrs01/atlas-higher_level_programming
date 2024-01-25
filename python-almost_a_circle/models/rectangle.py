@@ -143,3 +143,9 @@ class Rectangle(Base):
                 for j in range(self.__width):
                     print('#', end="")
                 print()  # prints new line after finishing row
+
+    def __str__(self):
+        """
+        Returns Rectangle description in string form
+        """
+        return '[{}]({}){}/{} - {}/{}'.format(type(self).__name__, self.id, self.x, self.y, self.width, self.height)
