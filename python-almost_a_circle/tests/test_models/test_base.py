@@ -20,7 +20,7 @@ class TestBase(unittest.TestCase):
         """
         pass
 
-    def test_base_instance_creation(self):
+    def test_automatic_ID_assignment(self):
         """
         Tests Base() instantiation and unique IDs
         """
