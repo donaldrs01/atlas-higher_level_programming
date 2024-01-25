@@ -148,4 +148,4 @@ class Rectangle(Base):
         """
         Returns Rectangle description in string form
         """
-        return '[{}]({}){}/{} - {}/{}'.format(type(self).__name__, self.id, self.x, self.y, self.width, self.height)
+        return '[{}] ({}) {}/{} - {}/{}'.format(type(self).__name__, self.id, self.x, self.y, self.width, self.height)
