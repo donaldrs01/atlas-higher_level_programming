@@ -24,6 +24,7 @@ class TestRectangle(unittest.TestCase):
         """
         Tests Rectangle class type
         """
+        r = Rectangle(1, 2)  # receives valid args
         self.assertIsInstance(Rectangle(), Rectangle)  # instance is type Rectangle
 
     def test_inheritance(self):
