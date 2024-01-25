@@ -8,6 +8,18 @@ from models.base import Base
 
 class TestBase(unittest.TestCase):
 
+    def setUp(self):
+        """
+        Imports module, instantiates class, resets counter
+        """
+        Base._Base__nb_objects = 0
+
+    def tearDown(self):
+        """
+        Resets to setUp conditions
+        """
+        pass
+
     def test_base_instance_creation(self):
         """
         Tests Base() instantiation and unique IDs
