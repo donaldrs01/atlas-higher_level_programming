@@ -97,3 +97,39 @@ class TestRectangle(unittest.TestCase):
             r = Rectangle(3, 4, 1, "test")
         s = "y must be an integer"
         self.assertEqual(str(e.exception), s)
+
+    def test_width_sub_zero(self):
+        """
+        Tests when width is less than zero
+        """
+        with self.assertRaises(ValueError) as e:
+            r = Rectangle(-2, 4)
+        s = "width must be > 0"
+        self.assertEqual(str(e.exception), s)
+
+    def test_height_sub_zero(self):
+        """
+        Tests when height is less than zero
+        """
+        with self.assertRaises(ValueError) as e:
+            r = Rectangle(3, -2)
+        s = "height must be > 0"
+        self.assertEqual(str(e.exception), s)
+
+    def test_x_sub_zero(self):
+        """
+        Tests when X is less than 0
+        """
+        with self.assertRaises(ValueError) as e:
+            r = Rectangle(3, 1, -2)
+        s = "x must be >= 0"
+        self.assertEqual(str(e.exception), s)
+
+    def test_y_sub_zero(self):
+        """
+        Tests when Y is less than 0
+        """
+        with self.assertRaises(ValueError) as e:
+            r = Rectangle(3, 1, 2, -4)
+        s = "y must be >= 0"
+        self.assertEqual(str(e.exception), s)
