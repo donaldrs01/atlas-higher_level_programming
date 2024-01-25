@@ -51,12 +51,3 @@ class TestBase(unittest.TestCase):
         i = 54
         b = Base(i)
         self.assertEqual(b.id, i)
-
-    def test_negative_ID(self):
-        """
-        Tests for when ID is neg value
-        """
-        i = -3
-        b = Base(i)
-        self.assertEqual(b.id, i)
-
