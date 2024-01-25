@@ -20,6 +20,12 @@ class TestBase(unittest.TestCase):
         """
         pass
 
+    def test_nb_objects_zeroed(self):
+        """
+        Tests that nb_objects has been zeroed
+        """
+        self.assertEqual(getattr(Base, "_Base__nb_objects"), 0)
+
     def test_automatic_ID_assignment(self):
         """
         Tests Base() instantiation and unique IDs
