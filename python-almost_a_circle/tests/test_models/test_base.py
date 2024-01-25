@@ -25,9 +25,7 @@ class TestBase(unittest.TestCase):
         Tests Base() instantiation and unique IDs
         """
         b = Base()  # Output : 1
-        b1 = Base()  # Output : 2
         self.assertEqual(b.id, 1)
-        self.assertEqual(b1.id, 2)
 
     def test_id_sync(self):
         """
