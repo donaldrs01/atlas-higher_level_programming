@@ -58,5 +58,5 @@ class TestBase(unittest.TestCase):
         """
         i = -3
         b = Base(i)
-        self.assertEqual(b.id, -3)
+        self.assertEqual(b.id, i)
 
