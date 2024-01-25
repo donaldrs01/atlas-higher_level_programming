@@ -32,7 +32,9 @@ class TestRectangle(unittest.TestCase):
         Tests if Rectangle is sub-class of Base
         """
         self.assertTrue(issubclass(Rectangle, Base))
-    
+   
+                    ### Constructor Tests ###
+
     def test_constructor_no_args(self):
         """
         Tests constructor when no arguments passed
@@ -58,5 +60,14 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(TypeError) as e:
             r = Rectangle(7)
         s = "Rectangle.__init__() missing 1 required positional argument: 'height'"
+        self.assertEqual(str(e.exception), s)
+
+    def test_width_not_int(self):
+        """
+        Tests when width not valid integer
+        """
+        with self.assertRaises(TypeError) as e:
+            r = Rectangle('test', 4)
+        s = "width must be an integer"
         self.assertEqual(str(e.exception), s)
 
