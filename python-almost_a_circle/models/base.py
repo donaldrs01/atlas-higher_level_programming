@@ -22,7 +22,6 @@ class Base:
             id (int) : If provided, assigns ID attribute to this value
             If not provided, automatically generates an ID
         """
-
         if id is not None:
             self.id = id
         else:
