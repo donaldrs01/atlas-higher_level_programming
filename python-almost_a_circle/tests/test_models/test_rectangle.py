@@ -51,3 +51,12 @@ class TestRectangle(unittest.TestCase):
         s = "Rectangle.__init__() takes from 3 to 6 positional arguments but 8 were given"
         self.assertEqual(str(e.exception), s)
 
+    def test_constructor_one_arg(self):
+        """
+        Tests constructor when one argument is passed
+        """
+        with self.assertRaises(TypeError) as e:
+            r = Rectangle(7)
+        s = "Rectangle.__init__() missing 1 required positional argument: 'height'"
+        self.assertEqual(str(e.exception), s)
+
