@@ -49,7 +49,12 @@ class Rectangle(Base):
         Args:
             value (int) : value of rectangle's width
         """
-        self.__width = value
+        if not isinstance(value, int):
+            raise TypeError("Width must be an integer")
+        elif value <= 0:
+            raise ValueError("Width must be greater than 0")
+        else:
+            self.__width = value
 
     @property
     def height(self):
