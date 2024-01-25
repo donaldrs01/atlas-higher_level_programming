@@ -10,7 +10,7 @@ class TestRectangle(unittest.TestCase):
 
     def setUp(self):
         """
-        Imports base model and instantiates Rectangle class
+        Imports base model, instantiates Rectangle, resets counter
         """
         Base._Base__nb_objects = 0
 
@@ -40,5 +40,14 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(TypeError) as e:
             r = Rectangle()
         s = "Rectangle.__init__() missing 2 required positional arguments: 'width' and 'height'"
+        self.assertEqual(str(e.exception), s)
+
+    def test_constructor_too_many_args(self):
+        """
+        Tests constructor when too many args passed
+        """
+        with self.assertRaises(TypeError) as e:
+            r = Rectangle(1, 5, 4, 2, 3, 12, 2)
+        s = "Rectangle.__init__() takes from 3 to 6 positional arguments but 8 were given"
         self.assertEqual(str(e.exception), s)
 
