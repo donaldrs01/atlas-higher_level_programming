@@ -14,7 +14,7 @@ class Base:
     """
     __nb_objects = 0
 
-    def__init__(self, id=None):
+    def __init__(self, id=None):
         """
         Initializes a new instance of Base class
 
