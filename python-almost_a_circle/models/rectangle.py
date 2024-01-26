@@ -2,7 +2,7 @@
 """
 Module for Rectangle sub-class definition
 """
-from models.base import Base
+from base import Base
 
 
 class Rectangle(Base):
@@ -179,8 +179,8 @@ class Rectangle(Base):
                 .format(type(self).__name__, self.id,
                         self.x, self.y, self.width, self.height))
 
-# test_rect = Rectangle(3, 5, 1, 2)
-# print("Area:", test_rect.area())
-# print("Display:")
-# test_rect.display()
-# print("String rep:", str(test_rect))
+test_rect = Rectangle(2, 5, 2, 2)
+print("Area:", test_rect.area())
+print("Display:")
+test_rect.display()
+print("String rep:", str(test_rect))
