@@ -2,7 +2,7 @@
 """
 Module for Rectangle sub-class definition
 """
-from models.base import Base
+from base import Base
 
 
 class Rectangle(Base):
@@ -149,4 +149,11 @@ class Rectangle(Base):
         """
         Returns Rectangle description in string form
         """
-        return '[{}] ({}) {}/{} - {}/{}'.format(type(self).__name__, self.id, self.x, self.y, self.width, self.height)
+        return '[{}] ({}) {}/{} - {}/{}'.format(type(self).__name__, self.id,\
+                self.x, self.y, self.width, self.height)  # line break
+
+# test_rect = Rectangle(3, 5, 1, 2)
+# print("Area:", test_rect.area())
+# print("Display:")
+# test_rect.display()
+# print("String rep:", str(test_rect))
