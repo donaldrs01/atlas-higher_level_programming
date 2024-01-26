@@ -23,6 +23,29 @@ class Square(Rectangle):
         #  calls Rectangle constructor and passes through values
         #  'size' value is passed as both width and height
 
+    @property
+    def size(self):
+        """
+        Getter for size attribute
+        """
+        return self.width
+
+    @size.setter
+    def size(self, value):
+        """
+        Setter for size attribute
+
+        Args:
+            value (int) : value of Square's side
+        """
+        if not isinstance(value, int):
+            raise TypeError("width must be an integer")
+        elif value <= 0:
+            raise ValueError("width must be > 0")
+        else:
+            self.width = value  # width and height of square are same
+            self.height = value
+
     def __str__(self):
         """
         Returns Square description in string form
