@@ -149,8 +149,9 @@ class Rectangle(Base):
         """
         Returns Rectangle description in string form
         """
-        return '[{}] ({}) {}/{} - {}/{}'.format(type(self).__name__, self.id,\
-                self.x, self.y, self.width, self.height)  # line break
+        return ('[{}] ({}) {}/{} - {}/{}'  # line break
+                .format(type(self).__name__, self.id,
+                        self.x, self.y, self.width, self.height))
 
 # test_rect = Rectangle(3, 5, 1, 2)
 # print("Area:", test_rect.area())
