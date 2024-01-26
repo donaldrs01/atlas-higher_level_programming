@@ -46,10 +46,35 @@ class Square(Rectangle):
             self.width = value  # width and height of square are same
             self.height = value
 
+    def update(self, *args, **kwargs):
+        """
+        Assigns attributes to specific arg order:
+            [0] : ID attribute
+            [1] : size attribute
+            [2] : x attribute
+            [3] : y attribute
+        'Kwargs' pairs keyword arguments with key in specific order.
+        Attribute is then assigned appropriate value.
+        """
+        if len(args) > 0:
+            self.id = args[0]
+        if len(args) > 1:
+            self.size = args[1]
+        if len(args) > 2:
+            self.x = args[2]
+        if len(args) > 3:
+            self.y = args[3]
+        for key, value in kwargs.items():  # access kwargs dict
+            setattr(self, key, value)  # assign attributes
+
     def __str__(self):
         """
         Returns Square description in string form
         """
         return ('[{}] ({}) {}/{} - {}'
                 .format(type(self).__name__, self.id,
-                        self.x, self.y, self.height))
+                    self.x, self.y, self.height))
+
+test_square = Square(1, 2, 3)
+test_square.update(24, 3, 7)
+print("String rep:", str(test_square))
