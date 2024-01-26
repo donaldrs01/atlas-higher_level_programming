@@ -73,8 +73,8 @@ class Square(Rectangle):
         """
         return ('[{}] ({}) {}/{} - {}'
                 .format(type(self).__name__, self.id,
-                    self.x, self.y, self.height))
+                        self.x, self.y, self.height))
 
-test_square = Square(1, 2, 3)
-test_square.update(24, 3, 7)
-print("String rep:", str(test_square))
+#  test_square = Square(1, 2, 3)
+#  test_square.update(24, 3, 7)
+#  print("String rep:", str(test_square))
