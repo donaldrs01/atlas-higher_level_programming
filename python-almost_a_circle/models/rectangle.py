@@ -145,7 +145,7 @@ class Rectangle(Base):
                 print(' ' * self.__x + "#" * self.__width)
                 # add spaces before printing row based on x input
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """
         Assigns attributes to specific argument order:
             [0] - ID attribute
@@ -153,6 +153,10 @@ class Rectangle(Base):
             [2] - Height attribute
             [3] - x attribute
             [4] - y attribute
+
+        With use of 'kwargs', we pass variable number of keyword args
+        that are paired with key in specific order. Attribute is then
+        assigned appropriate value.
         """
         if len(args) > 0:
             self.id = args[0]
@@ -164,6 +168,8 @@ class Rectangle(Base):
             self.x = args[3]
         if len(args) > 4:
             self.y = args[4]
+        for key, value in kwargs.items():  # access kwargs dict
+            setattr(self, key, value)  # attribute assigned
 
     def __str__(self):
         """
