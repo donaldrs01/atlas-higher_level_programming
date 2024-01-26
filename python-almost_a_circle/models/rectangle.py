@@ -179,7 +179,8 @@ class Rectangle(Base):
                 .format(type(self).__name__, self.id,
                         self.x, self.y, self.width, self.height))
 
-#  test_rect = Rectangle(2, 5, 2, 2)
+#  test_rect = Rectangle(1, 1, 1, 1)
+#  test_rect.update(2, 5, 2, 2)
 #  print("Area:", test_rect.area())
 #  print("Display:")
 #  test_rect.display()
