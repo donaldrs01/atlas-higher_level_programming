@@ -14,28 +14,22 @@ class TestBase(unittest.TestCase):
         """
         Base._Base__nb_objects = 0
 
-    def tearDown(self):
+    def test_auto_ID_assign(self):
         """
-        Resets to setUp conditions
+        Tests Base() instantiation and unique ID assignment
         """
-        pass
+        b = Base()
+        b2 = Base()
+        b3 = Base()
+        self.assertEqual(b.id, 1)
+        self.assertEqual(b2.id, 2)
+        self.assertEqual(b3.id, 3)
 
     def test_nb_objects_zeroed(self):
         """
         Tests that nb_objects has been zeroed
         """
         self.assertEqual(getattr(Base, "_Base__nb_objects"), 0)
-
-    def test_automatic_ID_assignment(self):
-        """
-        Tests Base() instantiation and unique IDs
-        """
-        b = Base()  # Output : 1
-        b2 = Base()  # Output : 2
-        b3 = Base()  # Output : 3
-        self.assertEqual(b.id, 1)
-        self.assertEqual(b2.id, 2)
-        self.assertEqual(b3.id, 3)
 
     def test_id_sync(self):
         """
