@@ -72,3 +72,4 @@ class Base:
             return []
         else:
             return json.loads(json_string)
+            #  deserializes : converts JSON string into dictionary
