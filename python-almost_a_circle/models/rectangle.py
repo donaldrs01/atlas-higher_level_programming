@@ -123,6 +123,10 @@ class Rectangle(Base):
             self.__y = value
 
     def to_dictionary(self):
+        """
+        Creates a dictionary representation (key:value pair)
+        of Rectangle instance
+        """
         a = self.id
         b = self.width
         c = self.height
