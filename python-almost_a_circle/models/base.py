@@ -82,3 +82,26 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
+        """
+        Class method that takes dictionary pairs (kwargs) of class
+        and creates instances with those values
+        
+        Args:
+            cls : represents class itself
+            **dictionary : variable number of keyword args representing
+            key/value pairs
+        """
+        from models.rectangle import Rectangle
+        from models.square import Square
+
+        if cls is Rectangle:
+            dummy = Rectangle(2, 1)
+        elif cls is Square:
+            dummy = Square(4)
+        else:
+            dummy = None
+
+        dummy.update(**dictionary)
+        #  update dummy instance with dict values
+        
+        return dummy
