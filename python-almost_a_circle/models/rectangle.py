@@ -122,6 +122,14 @@ class Rectangle(Base):
         else:
             self.__y = value
 
+    def to_dictionary(self):
+        a = self.id
+        b = self.width
+        c = self.height
+        d = self.x
+        e = self.y
+        return {"id": a, "width": b, "height": c, "x": d, "y": e}
+
     def area(self):
         """
         Calculates area of the rectangle
