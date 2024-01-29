@@ -85,7 +85,7 @@ class Base:
         """
         Class method that takes dictionary pairs (kwargs) of class
         and creates instances with those values
-        
+
         Args:
             cls : represents class itself
             **dictionary : variable number of keyword args representing
@@ -103,5 +103,5 @@ class Base:
 
         dummy.update(**dictionary)
         #  update dummy instance with dict values
-        
+
         return dummy
