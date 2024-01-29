@@ -92,8 +92,8 @@ class Base:
         if not path.isfile(file):  # checks if file exists
             return []  # returns empty list if not
         with open(file, "r", encoding="utf-8") as f:  # opens and reads
-            json_string = f.read()
-            return [cls.create(**dict) for dict in cls.from_json_string(json_string)]
+            jstr = f.read()
+            return [cls.create(**dict) for dict in cls.from_json_string(jtr)]
             #  creates instances for each dict in list
 
     @classmethod
