@@ -93,7 +93,7 @@ class Base:
             return []  # returns empty list if not
         with open(file, "r", encoding="utf-8") as f:  # opens and reads
             jstr = f.read()
-            return [cls.create(**dict) for dict in cls.from_json_string(jtr)]
+            return [cls.create(**dict) for dict in cls.from_json_string(jstr)]
             #  creates instances for each dict in list
 
     @classmethod
