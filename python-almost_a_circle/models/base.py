@@ -61,6 +61,7 @@ class Base:
             list_objs = []
         else:
             list_objs = [obj.to_dictionary() for obj in list_objs]
+            # list comprehension for method call on to_dictionary
         with open("{}.json".format(cls.__name__), "w", encoding="utf-8") as f:
             f.write(cls.to_json_string(list_objs))
             #  writes to file by calling to_json_string
