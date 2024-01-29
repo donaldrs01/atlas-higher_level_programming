@@ -68,8 +68,17 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
+        """
+        Static method that deserializes JSON string
+        and converts into dictionary
+
+        Args:
+            json_string : JSON-formatted string
+        """
         if json_string is None or len(json_string) == 0:
             return []
         else:
             return json.loads(json_string)
-            #  deserializes : converts JSON string into dictionary
+
+    @classmethod
+    def create(cls, **dictionary):
