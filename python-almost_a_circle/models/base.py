@@ -81,6 +81,22 @@ class Base:
             return json.loads(json_string)
 
     @classmethod
+    def load_from_file(cls):
+        """
+        Class method that loads instances from file by
+        converting JSON string into list of dicts and then
+        creating instances from these values
+        """
+        from os import path
+        file = "{}.json".format(cls.__name__)  # construct filename to search
+        if not path.isfile(file):  # checks if file exists
+            return []  # returns empty list if not
+        with open(file, "r", encoding="utf-8") as f:  # opens and reads
+            json_string = f.read()
+            return [cls.create(**dict) for dict in cls.from_json_string(json_string)]
+            #  creates instances for each dict in list
+
+    @classmethod
     def create(cls, **dictionary):
         """
         Class method that takes dictionary pairs (kwargs) of class
