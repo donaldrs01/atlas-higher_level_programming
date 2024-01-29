@@ -58,7 +58,7 @@ class Base:
             list_objs : list of instances of that class
         """
         if list_objs is None:
-            return "[]"
+            list_objs = []
         else:
             list_objs = [obj.to_dictionary() for obj in list_objs]
         with open("{}.json".format(cls.__name__), "w", encoding="utf-8") as f:
