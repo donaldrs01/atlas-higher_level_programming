@@ -45,6 +45,18 @@ class Square(Rectangle):
         else:
             self.width = value  # width and height of square are same
             self.height = value
+    
+    def to_dictionary(self):
+        """
+        Creates a dictionary representation (key:value pair)
+        of Square instance
+        """
+        a = self.id
+        b = self.size
+        c = self.x
+        d = self.y
+        return {"id": a, "size": b, "x": c, "y": d}
+
 
     def update(self, *args, **kwargs):
         """
