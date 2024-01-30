@@ -25,6 +25,7 @@ class TestBase(unittest.TestCase):
         """
         Tests Base() instantiation and unique ID assignment
         """
+        self.assertEqual(Base._Base__nb_objects, 0)
         b = Base()
         b2 = Base()
         b3 = Base()
