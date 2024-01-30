@@ -64,3 +64,12 @@ class TestBase(unittest.TestCase):
         Tests when to_json_string receives non-dictionary parameter
         """
         self.assertEqual(Base.to_json_string([1, 4, 8]), "[1, 4, 8]")
+
+    def test_json_string_valid(self):
+        """
+        Tests for when to_json_string receives valid input
+        """
+        obj_list = [{"id": 1, "name": "Test", "value": 42}]
+        json_string = Base.to_json_string(obj_list)
+        expected_json_string = '[{"id": 1, "name": "Test", "value": 42}]'
+        self.assertEqual(json_string, expected_json_string)
