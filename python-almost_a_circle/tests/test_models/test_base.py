@@ -6,6 +6,7 @@ Module for Base unit tests
 import unittest
 from models.base import Base
 
+
 class TestBase(unittest.TestCase):
 
     def setUp(self):
@@ -13,6 +14,12 @@ class TestBase(unittest.TestCase):
         Imports module, instantiates class, resets counter
         """
         Base._Base__nb_objects = 0
+
+    def tearDown(self):
+        """
+        Cleans up after each test
+        """
+        pass
 
     def test_auto_ID_assign(self):
         """
