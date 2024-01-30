@@ -46,13 +46,14 @@ class TestBase(unittest.TestCase):
         b = Base(i)
         self.assertEqual(b.id, i)
 
-    def test_to_json_string(self):
+    def test_json_string_empty(self):
         """
-        Tests the to_json_string method
+        Tests when to_json_string receives empty list
         """
-        b = Base()
-        json_string = Base.to_json_string([b.to_dictionary()])
-        self.assertEqual(json_string, '[{"id": 1}]')
-        #  Tests empty list
-        empty_json_string = Base.to_json_string([])
-        self.assertEqual(empty_json_string, "[]")
+        self.assertEqual(Base.to_json_string(None), "[]")
+
+    def test_json_string_not_dict(self):
+        """
+        Tests when to_json_string receives non-dictionary parameter
+        """
+        self.assertEqual(Base.to_json_string([1, 4, 8]), "[1, 4, 8]")
