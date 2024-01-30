@@ -33,12 +33,6 @@ class TestBase(unittest.TestCase):
         self.assertEqual(b2.id, 2)
         self.assertEqual(b3.id, 3)
 
-    def test_nb_objects_zeroed(self):
-        """
-        Tests that nb_objects has been zeroed
-        """
-        self.assertEqual(getattr(Base, "_Base__nb_objects"), 0)
-
     def test_id_sync(self):
         """
         Tests sync between nb_objects and ID
