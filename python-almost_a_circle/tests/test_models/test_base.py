@@ -53,6 +53,13 @@ class TestBase(unittest.TestCase):
         b = Base(i)
         self.assertEqual(b.id, i)
 
+    def test_negative_ID(self):
+        """
+        Tests negative ID input
+        """
+        b = Base(-5)
+        self.assertEqual(b.id, -5)
+
     def test_json_string_empty(self):
         """
         Tests when to_json_string receives empty list
