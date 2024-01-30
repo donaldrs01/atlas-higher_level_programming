@@ -1,3 +1,7 @@
+"""
+Module for Square unit tests
+"""
+
 import unittest
 from models.base import Base
 from models.square import Square
@@ -29,7 +33,7 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(s.size, 6)
         self.assertEqual(s.x, 0)
         self.assertEqual(s.y, 0)
-        
+
     def test_construction_all_args(self):
         """
         Tests constructor when all args passed
@@ -83,4 +87,3 @@ class TestSquare(unittest.TestCase):
         dict_def = s.to_dictionary()
         expected_def = {"id": 15, "size": 4, "x": 1, "y": 1}
         self.assertEqual(expected_def, dict_def)
-
