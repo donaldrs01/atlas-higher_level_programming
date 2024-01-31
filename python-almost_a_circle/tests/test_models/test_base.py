@@ -22,9 +22,7 @@ class TestBase(unittest.TestCase):
         pass
 
     def test_auto_ID_assign(self):
-        """
-        Tests Base() instantiation and unique ID assignment
-        """
+        
         self.assertEqual(Base._Base__nb_objects, 0)
         b = Base()
         b2 = Base()
