@@ -5,4 +5,4 @@ FROM tv_shows
 LEFT JOIN tv_show_genres ON tv_shows.id = tv_show_genres.show_id
 -- Includes all records from left table (tv_shows) regardless of whether there is a match in right table (tv_show_genres)
 -- Links 'id' column from tv_shows with 'show_id' column from tv_show_genres
-ORDER BY tv_shows.title ASC, genre_id ASC;
+ORDER BY tv_shows.title ASC, tv_show_genres.genre_id ASC;
