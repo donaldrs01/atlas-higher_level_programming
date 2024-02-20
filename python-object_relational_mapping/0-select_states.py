@@ -5,20 +5,21 @@ import MySQLdb
 import sys
 
 
-def list_all_states(user, password, db_name):
+def list_all_states():
     """Function that will connect to hbtn_0e_0_usa database and list all states
-
-    Args:
-        user (str): MYSQL username
-        password (str): MYSQL password
-        db_name (str): name of database from MYSQL server
     """
+    user = sys.argv[1]
+    password = sys.argv[2]
+    database_name = sys.argv[3]
+
     db = MySQLdb.connect(host="localhost",
                          port=3306,
                          user=user,
                          password=password,
-                         database=db_name)
+                         database=database_name)
+    
     cursor = db.cursor()  # creates cursor object
+
     cursor.execute("SELECT * FROM states ORDER BY id ASC;")
     allstates = cursor.fetchall()
     for state in allstates:
@@ -29,4 +30,4 @@ def list_all_states(user, password, db_name):
 
 
 if __name__ == "__main__":
-    list_all_states(sys.argv[1], sys.argv[2], sys.argv[3])
+    list_all_states()
