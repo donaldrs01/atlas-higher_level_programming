@@ -26,7 +26,7 @@ def cities_by_state():
                    JOIN states on cities.state_id = states.id \
                    WHERE states.name = %s \
                    ORDER BY cities.id ASC", (state_name,))
-    
+
     list_cities = cursor.fetchall()
 
     cities_str = ", ".join(city[0] for city in list_cities)
