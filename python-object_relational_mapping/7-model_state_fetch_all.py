@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-"""
-Module that lists all 'State' objects in hbtn_0e_6_usa database
+"""Script that lists all State objects present in 'states' table
+of hbtn_0e_6_usa database
 """
 from model_state import Base, State
 from sqlalchemy import create_engine
