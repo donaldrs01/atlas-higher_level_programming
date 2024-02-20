@@ -17,7 +17,7 @@ def list_all_states():
                          user=user,
                          password=password,
                          database=database_name)
-    
+
     cursor = db.cursor()  # creates cursor object
 
     cursor.execute("SELECT * FROM states ORDER BY id ASC;")
