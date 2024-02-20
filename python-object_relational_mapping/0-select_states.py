@@ -10,7 +10,7 @@ def list_all_states(user, password, db_name):
     Args:
         user (str): MYSQL username
         password (str): MYSQL password
-        db_name (str): name of database
+        db_name (str): name of database in MYSQL server
     """
     db = MySQLdb.connect(host="localhost",
                          port=3306,
