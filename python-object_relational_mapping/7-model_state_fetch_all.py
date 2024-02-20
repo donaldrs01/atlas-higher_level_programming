@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Script that lists all State objects present in 'states' table
+"""
+Script that lists all State objects present in 'states' table
 of hbtn_0e_6_usa database
 """
 from model_state import Base, State
