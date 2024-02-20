@@ -21,7 +21,7 @@ def list_N_states():
     )
 
     cursor = db.cursor()
-    cursor.execute("SELECT * FROM states WHERE name LIKE 'N%';")
+    cursor.execute("SELECT * FROM states WHERE binary name LIKE 'N%';")
     #  searches for state names that start with 'N'
     Nstates = cursor.fetchall()
     for state in Nstates:
