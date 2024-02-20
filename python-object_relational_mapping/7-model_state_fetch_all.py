@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Lists all 'State' objects in hbtn_0e_6_usa database
+"""
+Lists all 'State' objects in hbtn_0e_6_usa database
 """
 from model_state import Base, State
 from sqlalchemy import create_engine
