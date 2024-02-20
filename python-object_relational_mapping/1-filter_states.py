@@ -22,7 +22,7 @@ def list_N_states():
 
     cursor = db.cursor()
     cursor.execute("SELECT * FROM states WHERE name LIKE 'N% OR 'n%'; ")
-    #  searches for state names that start with 'N'
+    #  searches for state names that start with 'N' or 'n'
     Nstates = cursor.fetchall()
     for state in Nstates:
         print(state)
