@@ -8,6 +8,7 @@ from sqlalchemy.ext.declarative import declarative_base
 # Create base class that can be inherited by other classes
 Base = declarative_base()
 
+
 class State(Base):
     """'State' class creation with a unique ID and name
         Attributes:
@@ -21,5 +22,5 @@ class State(Base):
     id = Column(Integer, primary_key=True, nullable=False, autoincrement=True)
     name = Column(String(128), nullable=False)
 
-engine = create_engine('mysql+mysqldb://root:root@localhost:3306/hbtn_0e_6_usa')
 
+eng = create_engine('mysql+mysqldb://root:root@localhost:3306/hbtn_0e_6_usa')
