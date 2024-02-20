@@ -4,6 +4,7 @@
 import MySQLdb
 import sys
 
+
 def state_filter():
     user = sys.argv[1]
     password = sys.argv[2]
@@ -28,9 +29,10 @@ def state_filter():
 
     for row in result:
         print(row)
-    
+
     cursor.close()
     db.close()
+
 
 if __name__ == "__main__":
     state_filter()
