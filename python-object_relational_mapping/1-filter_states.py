@@ -4,6 +4,7 @@
 import MySQLdb
 import sys
 
+
 def list_N_states():
     """Connects with database and lists states with names starting with 'N'
     """
@@ -12,22 +13,23 @@ def list_N_states():
     database_name = sys.argv[3]
 
     db = MySQLdb.connect(
-        host = "localhost",
-        port = 3306,
-        user = user,
-        password = password,
-        database = database_name
+        host="localhost",
+        port=3306,
+        user=user,
+        password=password,
+        database=database_name
     )
 
     cursor = db.cursor()
-    cursor.execute("SELECT * FROM states WHERE name LIKE 'N%'; ")
+    cursor.execute("SELECT * FROM states WHERE name LIKE 'N% OR 'n%'; ")
     #  searches for state names that start with 'N'
     Nstates = cursor.fetchall()
     for state in Nstates:
         print(state)
-    
+
     cursor.close()
     db.close()
+
 
 if __name__ == "__main__":
     list_N_states()
