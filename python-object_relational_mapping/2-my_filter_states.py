@@ -21,7 +21,8 @@ def state_filter():
 
     cursor = db.cursor()
 
-    query = "SELECT * FROM states WHERE name = '{}' ORDER BY id ASC".format(state_name)
+    query = "SELECT * FROM states WHERE name = '{}' \
+        ORDER BY id ASC".format(state_name)
     #  {} used as placeholder, will be replaced next line with state_name
     cursor.execute(query)
 
