@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Lists all states in 'hbtn_0e_0_usa' database in MySQL server
+"""Lists all states in 'hbtn_0e_0_usa' database in MySQL serverr
 """
 import MySQLdb
 import sys
