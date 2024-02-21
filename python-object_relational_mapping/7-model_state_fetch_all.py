@@ -6,9 +6,9 @@ of hbtn_0e_6_usa database
 Usage: 
     python3 7-model_state_fetch_all.py <username> <pw> <db_name>
 """
-from model_state import Base, State
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
+from model_state import Base, State
 import sys
 
 
