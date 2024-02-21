@@ -3,7 +3,7 @@
 Script that lists all State objects present in 'states' table
 of hbtn_0e_6_usa database
 
-Usage: 
+Usage:
     python3 7-model_state_fetch_all.py <username> <pw> <db>
 """
 
@@ -14,7 +14,7 @@ import sys
 
 
 if __name__ == "__main__":
-    
+
     #  assign args to variables
     user = sys.argv[1]
     pw = sys.argv[2]

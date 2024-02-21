@@ -17,7 +17,7 @@ if __name__ == "__main__":
     engine = create_engine(
         f'mysql+mysqldb://{user}:{pw}@localhost:3306/{db_name}'
     )
-    
+
     Base.metadata.bind = engine
 
     Session = sessionmaker(bind=engine)
@@ -28,5 +28,5 @@ if __name__ == "__main__":
         print("Nothing")
     else:
         print(f'{first_state.id}: {first_state.name}')
-    
+
     session.close()
