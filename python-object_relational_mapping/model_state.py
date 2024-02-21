@@ -11,6 +11,7 @@ Base = declarative_base()
 
 class State(Base):
     """'State' class creation with a unique ID and name
+    
         Attributes:
         id (Column) : integer column that represents the state's unique ID
         name (Column) : string column that provides the name of the state
