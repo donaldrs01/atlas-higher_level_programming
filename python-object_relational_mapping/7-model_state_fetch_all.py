@@ -4,8 +4,9 @@ Script that lists all State objects present in 'states' table
 of hbtn_0e_6_usa database
 
 Usage: 
-    python3 7-model_state_fetch_all.py <username> <pw> <db_name>
+    python3 7-model_state_fetch_all.py <username> <pw> <db>
 """
+
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
