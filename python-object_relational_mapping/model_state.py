@@ -3,7 +3,7 @@
 Also creates an instance 'Base' of the declarative_base() class
 """
 from sqlalchemy import create_engine, Column, Integer, String
-from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import declarative_base
 
 # Create base class that can be inherited by other classes
 Base = declarative_base()
