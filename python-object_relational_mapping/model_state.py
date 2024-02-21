@@ -4,7 +4,6 @@ Also creates an instance 'Base' of the declarative_base() class
 """
 from sqlalchemy import create_engine, Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import sessionmaker
 
 # Create base class that can be inherited by other classes
 Base = declarative_base()
@@ -23,9 +22,3 @@ class State(Base):
     #  Define columns in 'states' table
     id = Column(Integer, primary_key=True, nullable=False, autoincrement=True)
     name = Column(String(128), nullable=False)
-
-
-eng = create_engine('mysql+mysqldb://root:root@localhost:3306/hbtn_0e_6_usa')
-
-#  Create 'states' table
-Base.metadata.create_all(eng)
