@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Prints all 'State' objects that contain the letter 'A' from the hbtn_0e_6_usa database
+"""Prints all 'State' objects that contain the
+letter 'A' from the hbtn_0e_6_usa database
 """
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
@@ -26,5 +27,5 @@ if __name__ == "__main__":
 
     for state in a_states:
         print(f'{state.id}: {state.name}')
-    
+
     session.close()
