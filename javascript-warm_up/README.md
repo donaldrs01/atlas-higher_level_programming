@@ -1,0 +1,1 @@
+This directory is for the beginning of my work with JavaScript.
