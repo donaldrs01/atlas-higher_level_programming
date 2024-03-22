@@ -2,3 +2,4 @@
 class Rectangle {
   // Empty class - no constuctor or methods yet
 }
+module.exports = Rectangle;
