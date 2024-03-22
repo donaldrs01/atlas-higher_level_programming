@@ -1,0 +1,1 @@
+This directory contains tasks related to the basics of constructing objects in JS. 
