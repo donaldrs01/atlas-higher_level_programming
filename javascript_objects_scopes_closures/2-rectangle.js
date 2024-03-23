@@ -1,7 +1,6 @@
 #!/usr/bin/node
 
 class Rectangle {
- 
   constructor (w, h) {
     /* Establish parameters for SUCCESSFUL creation,
         not the ones to avoid for unsuccessful creation of class */
