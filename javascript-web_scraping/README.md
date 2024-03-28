@@ -1,0 +1,1 @@
+This directory contains tasks dealing with web scraping and dealing with JSON data using the request module. 
