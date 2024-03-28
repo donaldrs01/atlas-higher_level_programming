@@ -8,5 +8,6 @@ request(apiURL, (error, response, body) => {
         console.error(error);
         return;
     }
-    
+    /* Prase JSON resposne, search for films with specific charID and assign var,
+    print length of var */
 })
