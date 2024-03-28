@@ -7,6 +7,6 @@ fs.writeFile(filePath, content, error => {
   if (error) {
     console.error(error);
   } else {
-    console.log(content);
+    // file written successfully
   }
 });
