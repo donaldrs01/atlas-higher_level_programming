@@ -12,9 +12,7 @@ request(url, (error, response, body) => {
     fs.writeFile(filePath, body, { encoding: 'utf-8' }, error => {
       if (error) {
         console.error('Error writing to file:', error);
-        return;
       }
-      console.log('Content has been saved to', filePath);
     });
   }
 });
