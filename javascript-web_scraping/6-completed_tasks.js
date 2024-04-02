@@ -14,8 +14,8 @@ request(URL, (error, response, body) => {
 
   todos.forEach(todo => {
     if (todo.completed) {
-        // If userID exists, increment the count
-      if (completedTasks[todo.userID]) {
+      // If userID exists, increment the count
+      if (completedTasks[todo.userId]) {
         completedTasks[todo.userId]++;
       } else {
         // If userID doesn't exist, this is their first task, so initialize to 1
