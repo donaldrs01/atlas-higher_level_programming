@@ -16,6 +16,6 @@ request(apiURL, (error, response, body) => {
   const wedgeFilms = films.filter(film => {
     return film.characters.some(character => character.includes(`/api/people/${charID}/`));
   });
-
-  console.log(wedgeFilms);
+  // Print length of wedgeFilms array
+  console.log(wedgeFilms.length);
 });
